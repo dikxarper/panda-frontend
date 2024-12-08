@@ -1,21 +1,28 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
-import { Layout } from 'antd';
+import { ConfigProvider, Layout } from 'antd';
 
-import Home from '../modules/Home/Home';
-import Header from '../shared/components/Layout/Header/Header';
+import WelcomePage from '../modules/Home/WelcomePage';
+// import Header from '../shared/components/Layout/Header/Header';
 import './App.css';
 
 const { Content } = Layout;
 
 const MainLayout: React.FC = () => {
     return (
-        <Layout>
-            <Header />
-            <Content>
-                <Outlet />
-            </Content>
-        </Layout>
+        <ConfigProvider
+            theme={{
+                token: {
+                    fontFamily: 'Open Sans',
+                }
+            }}
+        >
+            <Layout>
+                <Content>
+                    <Outlet />
+                </Content>
+            </Layout>
+        </ConfigProvider>
     );
 };
 
@@ -24,7 +31,7 @@ const App: React.FC = () => {
         <BrowserRouter>
             <Routes>
                 <Route element={<MainLayout />}>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<WelcomePage />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Route>
             </Routes>

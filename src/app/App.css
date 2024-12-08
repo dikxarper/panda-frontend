@@ -1,26 +1,5 @@
-:root {
-    --main-blue: #041225;
-    --icon-blue: #0E2B52;
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.container {
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.text-blue {
-    color: var(--icon-blue);
-}
-
-.text-1 {
-    font-size: 1rem !important;
-}
-
-.text-125 {
-    font-size: 1.25rem !important;
-}
-
-.text-15 {
-    font-size: 1.5rem !important;
+body {
+    margin: 0;
 }

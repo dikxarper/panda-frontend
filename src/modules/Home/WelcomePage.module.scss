@@ -1,0 +1,41 @@
+@use '../../shared/assets/scss/media' as *;
+
+$model-container-w: 100%;
+$model-container-h: 90vh;
+
+$button-w: 320px;
+$button-h: 64px;
+$button-fs: 24px;
+$button-pos: absolute;
+$button-b: 24px;
+$button-br: 32px;
+
+$button-xs2-w: 100%;
+$button-sm-w: 90%;
+
+.model-container {
+    width: 100%;
+    height: 100vh;
+    .model {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.button {
+    position: $button-pos;
+    bottom: $button-b;
+    width: $button-w;
+    height: $button-h;
+
+    font-size: $button-fs;
+    border-radius: $button-br;
+    
+    @include media('max', 'xs2') {
+        width: $button-xs2-w;
+    }
+
+    @include media('max', 'sm') {
+        width: $button-sm-w;
+    }
+}
