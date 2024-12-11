@@ -1,0 +1,36 @@
+@use '@/shared/components/ui/scss/colors' as *;
+
+$menu-title-content-p: 10px 0 6px;
+$menuIcon-size: 32px;
+
+$menu-p: 16px;
+$menu-br: 32px;
+
+:global(.ant-menu-dark) {
+    background: $warm-dark;
+}
+
+.menu {
+    padding: $menu-p;
+    border-radius: $menu-br;
+
+
+    li {
+        border-radius: $menu-br !important;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    :global(.ant-menu-title-content) {
+        padding: $menu-title-content-p;
+    }
+}
+
+.menuIcon {
+    width: $menuIcon-size;
+    height: $menuIcon-size;
+    pointer-events: none;
+}

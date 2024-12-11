@@ -1,0 +1,20 @@
+@use '@/shared/components/ui/scss/media' as *;
+@use '@/shared/components/ui/scss/colors' as *;
+
+$container-p-x: 24px;
+
+.container {
+    margin: 0 auto;
+    padding: 0 $container-p-x;
+    text-align: center;
+    background-color: #fff;
+
+    .demo-button {
+        margin-bottom: 8px;
+    }
+
+    .submit-button, 
+    .verify-button {
+        margin-top: 12px;
+    }
+}

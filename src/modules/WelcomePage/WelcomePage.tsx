@@ -45,13 +45,9 @@ const WelcomePage: React.FC = () => {
 
     return (
         <>
-            <div className={styles['model-container']}>
-                <div className={styles.model}>
-                    <Canvas
-                        camera={{
-                            fov: 32,
-                        }}
-                    >
+            <div className={styles['container']}>
+                <div className={styles['model-scene']}>
+                    <Canvas camera={{ fov: 32 }}>
                         <ambientLight intensity={0.5} />
                         <directionalLight position={[10, 10, 10]} intensity={1} />
                         <Model />
@@ -63,6 +59,7 @@ const WelcomePage: React.FC = () => {
                 <Button 
                     className={styles.button}
                     loading={buttonLoading}
+                    href='/login'
                     style={{
                         backgroundColor: buttonLoading ? 'white' : '#1A1A1A',
                         color: buttonLoading ? 'black' : 'white',

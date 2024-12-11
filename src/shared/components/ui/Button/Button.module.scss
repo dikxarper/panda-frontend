@@ -1,0 +1,20 @@
+@use '../scss/colors.scss' as *;
+@use '../scss/media.scss' as *;
+
+$button-w: 300px;
+$button-p: 24px 0;
+$button-fs: 21px;
+$button-fw: 600;
+$button-br: 24px;
+$button-bw: 2px;
+
+.button {
+    width: $button-w;
+    padding: $button-p;
+
+    font-size: $button-fs;
+    font-weight: $button-fw;
+    border-width: $button-bw;
+    border-radius: $button-br;
+    border-color: $warm-dark;
+}

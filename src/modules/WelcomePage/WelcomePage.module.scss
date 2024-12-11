@@ -1,24 +1,27 @@
-@use '../../shared/assets/scss/media' as *;
+@use '@/shared/components/ui/scss/media' as *;
 
-$model-container-w: 100%;
-$model-container-h: 90vh;
+$container-w: 100%;
+$container-h: 100vh;
+
+$model-w: 100%;
+$model-h: 100%;
 
 $button-w: 320px;
 $button-h: 64px;
 $button-fs: 24px;
+$button-sm-fs: 21px;
 $button-pos: absolute;
 $button-b: 24px;
-$button-br: 32px;
-
-$button-xs2-w: 100%;
+$button-br: 24px;
 $button-sm-w: 90%;
 
-.model-container {
-    width: 100%;
-    height: 100vh;
-    .model {
-        width: 100%;
-        height: 100%;
+.container {
+    width: $container-w;
+    height: $container-h;
+
+    .model-scene {
+        width: $model-w;
+        height: $model-h;
     }
 }
 
@@ -30,12 +33,9 @@ $button-sm-w: 90%;
 
     font-size: $button-fs;
     border-radius: $button-br;
-    
-    @include media('max', 'xs2') {
-        width: $button-xs2-w;
-    }
 
     @include media('max', 'sm') {
+        font-size: $button-sm-fs;
         width: $button-sm-w;
     }
 }
