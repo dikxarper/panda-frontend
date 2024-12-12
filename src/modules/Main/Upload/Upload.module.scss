@@ -1,0 +1,40 @@
+@use '@/shared/components/ui/scss/colors' as *;
+
+$menu-title-content-p: 14px 0 8px;
+$menuIcon-size: 24px;
+
+$menu-br: 24px;
+
+:global(.ant-menu-dark) {
+    background: $warm-dark;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(97, 165, 55, 1);
+}
+
+.menu {
+    border-radius: $menu-br;
+
+
+    li {
+        border-radius: $menu-br !important;
+
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    :global(.ant-menu-title-content) {
+        padding: $menu-title-content-p;
+    }
+}
+
+.menuIcon {
+    width: $menuIcon-size;
+    height: $menuIcon-size;
+    pointer-events: none;
+}
