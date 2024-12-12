@@ -1,0 +1,52 @@
+$banner-h: 180px;
+$banner-bb: 1px solid;
+$banner-br: 10px;
+
+$profile-info-p: 0 14px;
+$profile-img-mt: -50px;
+
+.banner {
+    height: $banner-h;
+
+    border-bottom: $banner-bb;
+    border-radius: $banner-br;
+}
+
+.profile-info {
+    padding: $profile-info-p;
+
+    .profile-img {
+        margin-top: $profile-img-mt;
+    }
+
+    .profile-username {
+        font-size: 20px;
+    }
+
+    .profile-text {
+        line-height: 22px;
+        font-size: 15px;
+        color: rgba(117, 117, 117, 1);
+    }
+
+    .profile-model-container {
+        text-align: center;
+        margin-top: 100px;
+
+        @keyframes impulse {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .profile-model {
+            display: inline-block;
+            animation: impulse 1.5s infinite;
+        }
+    }
+}

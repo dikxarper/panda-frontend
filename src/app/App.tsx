@@ -3,10 +3,11 @@ import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom
 import { useSelector } from 'react-redux';
 import { ConfigProvider, Layout } from 'antd';
 
-import WelcomePage from '../modules/WelcomePage/WelcomePage';
-import Login from '../modules/Auth/Login';
-import Register from '../modules/Auth/Register';
-import Verification from '../modules/Auth/Verification';
+import WelcomePage from '@/modules/WelcomePage/WelcomePage';
+import Login from '@/modules/Auth/Login';
+import Register from '@/modules/Auth/Register';
+import Verification from '@/modules/Auth/Verification';
+import Main from '@/modules/Main/Main';
 import Menu from './Menu/Menu';
 import './App.css';
 
@@ -51,7 +52,7 @@ const App: React.FC = () => {
         ) : (
           <Route element={<MainLayout />}>
             <Route path="/" element={<Navigate to="/home" />} />
-            <Route path="/home" element={<div>Home Page</div>} />
+            <Route path="/home" element={<Main />} />
             <Route path="/*" element={<Navigate to="/home" />} />
           </Route>
         )}

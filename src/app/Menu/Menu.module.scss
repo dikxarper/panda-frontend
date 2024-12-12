@@ -1,10 +1,10 @@
 @use '@/shared/components/ui/scss/colors' as *;
 
-$menu-title-content-p: 10px 0 6px;
-$menuIcon-size: 32px;
+$menu-title-content-p: 14px 0 8px;
+$menuIcon-size: 24px;
 
-$menu-p: 16px;
-$menu-br: 32px;
+$menu-p: 8px;
+$menu-br: 24px;
 
 :global(.ant-menu-dark) {
     background: $warm-dark;

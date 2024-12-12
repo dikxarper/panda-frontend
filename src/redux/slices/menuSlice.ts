@@ -5,11 +5,11 @@ interface MenuState {
 }
 
 const initialState: MenuState = {
-    key: 1,
+    key: 4,
 };
 
-const authSlice = createSlice({
-    name: 'auth',
+const menuSlice = createSlice({
+    name: 'menu',
     initialState,
     reducers: {
         changeMenuKey: (state, action: PayloadAction<number>) => {
@@ -18,5 +18,5 @@ const authSlice = createSlice({
     },
 });
 
-export const { changeMenuKey } = authSlice.actions;
-export default authSlice.reducer;
+export const { changeMenuKey } = menuSlice.actions;
+export default menuSlice.reducer;
